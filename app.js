@@ -9,8 +9,11 @@ var index = require('./routes/index');
 var eraseEvents = require('./routes/eraseEvents');
 var events = require('./routes/events');
 var actor = require('./routes/actor');
+var db = require('./db/config');
 
 var app = express();
+
+db.init();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,7 +26,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 app.use('/', index);
 app.use('/erase', eraseEvents);
