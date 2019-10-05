@@ -6,7 +6,7 @@
     "dev": "nodemon app.js",
     "prestart": "npm install",
     "start": "node ./bin/www",
-    "pretest-non": "npm install",
+    "pretest": "npm install",
     "test": "./node_modules/.bin/mocha test"
   },
   "dependencies": {
