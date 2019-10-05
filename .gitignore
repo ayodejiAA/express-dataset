@@ -229,3 +229,6 @@ node_modules/
 
 # Ignore db file
 event.db
+
+# Editor Config
+.editorconfig
